@@ -14,7 +14,7 @@ on:
         type: choice
         options:
           - Official
-          - 下一页
+          - Next
           - MKSU
           - SukiSU
         default: SukiSU
