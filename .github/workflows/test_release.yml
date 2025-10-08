@@ -40,6 +40,7 @@ on:
         description: '自定义版本名(如5.10.198后面的字符/留空则使用默认版本号)'
         required: false
         type: string
+        default: -android12-9-00064-gea4a6f067d3f-ab12969919
       use_zram:
         description: '是否开启增加更多ZRAM算法?'
         required: true
@@ -159,7 +160,7 @@ jobs:
     if: ${{ inputs.make_release }}
     env:
       REPO_OWNER: 763723603
-      REPO_NAME: GKI_KernelSU_SUSFS
+      REPO_NAME: GKI_KernelSU_SUSFS_KPM
       SUS_VERSION: ''
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       RELEASE_NAME: "GKI内核: ${{ inputs.kernelsu_variant == 'Next' && 'KernelSU-' || '' }}${{ inputs.kernelsu_variant }}(${{ needs.get_manager.outputs.ksuVer }})  & SUSFS ${{ needs.get_manager.outputs.susVer }}"
