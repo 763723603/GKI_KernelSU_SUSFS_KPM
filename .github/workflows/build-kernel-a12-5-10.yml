@@ -35,7 +35,7 @@ on:
         description: '自定义版本名(如5.10.198后面的字符/留空则使用默认版本号)'
         required: false
         type: string
-      build_time:
+        default: -android12-9-00064-gea4a6f067d3f-ab12969919
         description: '设置内核构建时间(格式见仓库说明)'
         required: false
         type: string
