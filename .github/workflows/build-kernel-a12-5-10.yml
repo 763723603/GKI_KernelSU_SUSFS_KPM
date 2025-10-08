@@ -14,7 +14,7 @@ on:
         type: choice
         options:
           - Official
-          - Next
+          - 下一页
           - MKSU
           - SukiSU
         default: SukiSU
@@ -36,6 +36,7 @@ on:
         required: false
         type: string
         default: -android12-9-00064-gea4a6f067d3f-ab12969919
+      build_time:
         description: '设置内核构建时间(格式见仓库说明)'
         required: false
         type: string
