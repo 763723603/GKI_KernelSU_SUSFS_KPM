@@ -139,8 +139,8 @@ jobs:
 
       - name: 配置 Git
         run: |
-          git config --global user.name "zzh20188"
-          git config --global user.email "BuildGkiKernel@gmail.com"
+          git config --global user.name "763723603"
+          git config --global user.email "763723603@qq.com"
       
       - name: 密钥设置——已经过mkppk修改
         env:
@@ -487,7 +487,7 @@ jobs:
             echo "CONFIG_ZRAM=y" >> "$CONFIG_FILE"
             echo "CONFIG_MODULE_SIG=n" >> "$CONFIG_FILE"
             echo "CONFIG_CRYPTO_LZO=y" >> "$CONFIG_FILE"
-            echo "CONFIG_ZRAM_DEF_COMP_LZ4KD=y" >> "$CONFIG_FILE"
+            echo "CONFIG_ZRAM_DEF_COMP_LZ4=y" >> "$CONFIG_FILE"
           fi
 
           if [ "${{ inputs.kernel_version }}" != "6.6" ] && [ "${{ inputs.kernel_version }}" != "5.10" ]; then
@@ -520,6 +520,7 @@ jobs:
             echo "CONFIG_CRYPTO_LZ4KD=y" >> "$CONFIG_FILE"
             echo "CONFIG_CRYPTO_842=y" >> "$CONFIG_FILE"
             echo "CONFIG_CRYPTO_LZ4K_OPLUS=y" >> "$CONFIG_FILE"
+            echo "CONFIG_ZRAM_WRITEBACK=y" >> "$CONFIG_FILE"
           fi
       
       - name: Baseband-guard 补丁
