@@ -157,8 +157,8 @@ jobs:
         - build-kernel-a14-6-1
         - build-kernel-a15-6-6
     env:
-      REPO_OWNER: zzh20188
-      REPO_NAME: GKI_KernelSU_SUSFS
+      REPO_OWNER: 763723603
+      REPO_NAME: GKI_KernelSU_SUSFS_KPM
       SUS_VERSION: ''
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       RELEASE_NAME: "GKI内核: ${{ inputs.kernelsu_variant == 'Next' && 'KernelSU-' || '' }}${{ inputs.kernelsu_variant }}(${{ needs.get_manager.outputs.ksuVer }})  & SUSFS ${{ needs.get_manager.outputs.susVer }}"
